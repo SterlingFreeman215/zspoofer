@@ -10,11 +10,14 @@ def main():
     print(colored("\n\nTool developed by zereza\n\n", 'yellow', attrs=['bold']))
     username = "sterlingfreeman215@gmail.com"
     password = "6mskwXhRQfMK8JSB"
+    
     target = input(colored("The target's email  ---->    ", 'green'))
+    
     name = input(colored("\n\nThe sender's name [OPTIONAL]  ---->   ", 'green'))
     sender = input(colored("\n\nThe sender of the email   ---->   ", 'green'))
     subject = input(colored("\n\nThe email subject  ---->   ", 'green'))
-    message = input(colored("\n\nThe email message  ---->   ", 'green'))
+    
+    message = input(colored("\n\nThe email message  ---->                                                        ", 'green'))
     
     if name == '':
         os.system('sendemail -xu \"'+username+'\" -xp \"'+password+'\" -f \"'+sender+'\" -t \"'+target+'\" -u \"'+subject+'\" -m \"'+message+'\" -s "smtp-relay.brevo.com:587" &>/dev/null')
